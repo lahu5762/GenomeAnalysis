@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5 -M snowy
+#SBATCH -p core
+#SBATCH -n 4
+#SBATCH -t 20:00:00
+#SBATCH -J canu_run_01
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lars.huson.5762@student.uu.se
+
+# load modules
+module load bioinfo-tools canu
+
+# move to node
+export SRCDIR=$HOME/private/GenomeAnalysis
+scp -r $SRCDIR/raw_data/pacbio_data $SNIC_TMP/
+cd $SNIC_TMP
+
+# execute code
+canu \
+ -p durian -d durian-pacbio \
+ genomeSize=42.1m useGrid=False maxThreads=4\
+ -pacbio ./pacbio_data/*
+
+# copy output
+scp ./durian-pacbio/* $SRCDIR/analyses/canu_output
