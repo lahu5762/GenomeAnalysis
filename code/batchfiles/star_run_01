@@ -1,0 +1,72 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5 -M snowy
+#SBATCH -p core
+#SBATCH -n 8
+#SBATCH -t 01:00:00
+#SBATCH -J STAR_run_01
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lars.huson.5762@student.uu.se
+
+#Modules
+module load bioinfo-tools
+module load gcc/6.2.0
+module load star/2.5.2b
+
+# move to node
+export SRCDIR=$HOME/private/GenomeAnalysis
+scp -r $SRCDIR/raw_data/transcriptome/trimmed $SNIC_TMP/
+cd $SNIC_TMP
+mkdir star
+
+#Commands
+STAR --runThreadN 8 \
+     --genomeDir indices \
+     --outFileNamePrefix star/star_out_SRR6040092_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6040092_scaffold_06.1.fastq.gz,trimmed/SRR6040092_scaffold_06.2.fastq.gz 
+
+STAR --runThreadN 8 \
+     --genomeDir /home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040093_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6040093_scaffold_06.1.fastq.gz,trimmed/SRR6040093_scaffold_06.2.fastq.gz
+
+STAR --runThreadN 8 \
+     --genomeDir /home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040094_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6040094_scaffold_06.1.fastq.gz,trimmed/SRR6040094_scaffold_06.2.fastq.gz 
+
+STAR --runThreadN 8 \
+     --genomeDir /home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040096_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6040096_scaffold_06.1.fastq.gz,trimmed/SRR6040096_scaffold_06.2.fastq.gz 
+
+STAR --runThreadN 8 \
+     --genomeDir /home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040097_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6040097_scaffold_06.1.fastq.gz,trimmed/SRR6040097_scaffold_06.2.fastq.gz 
+
+STAR --runThreadN 8 \
+     --genomeDir /home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6156066_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6156066_scaffold_06.1.fastq.gz,trimmed/SRR6156066_scaffold_06.2.fastq.gz 
+
+STAR --runThreadN 8 \
+     --genomeDir /home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6156067_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6156067_scaffold_06.1.fastq.gz,trimmed/SRR6156067_scaffold_06.2.fastq.gz 
+
+STAR --runThreadN 8 \
+     --genomeDir /home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6156069_scaffold_06 \
+     --readFilesCommand gunzip -c \
+     --readFilesIn trimmed/SRR6156069_scaffold_06.1.fastq.gz,trimmed/SRR6156069_scaffold_06.2.fastq.gz 
+
+
+#save results
+scp -r star/* $SRCDIR/analyses/star

@@ -1,0 +1,22 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5 -M snowy
+#SBATCH -p core
+#SBATCH -n 4
+#SBATCH -t 08:00:00
+#SBATCH -J RepeatMasker_run_01
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lars.huson.5762@student.uu.se
+
+#load modules
+module load bioinfo-tools RepeatMasker
+
+#prepare workspace
+export SCRDIR=$HOME/private/GenomeAnalysis
+scp -r $SRCDIR/analyses/pilon $SNIC_TMP/
+cd $SNIC_TMP
+
+#commands
+RepeatMasker pilon/pilon_corrected_durian.fasta -species Gossypium
+
+#save output
+scp * $SRCDIR/analyses/repeatmasker
