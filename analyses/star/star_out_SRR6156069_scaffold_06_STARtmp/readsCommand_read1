@@ -1,0 +1,5 @@
+exec > "star/star_out_SRR6156069_scaffold_06_STARtmp/tmp.fifo.read1"
+echo FILE 0
+gunzip   -c      "trimmed/SRR6156069_scaffold_06.1.fastq.gz"
+echo FILE 1
+gunzip   -c      "trimmed/SRR6156069_scaffold_06.2.fastq.gz"
