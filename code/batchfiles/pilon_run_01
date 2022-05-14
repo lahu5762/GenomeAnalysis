@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -A uppmax2022-2-5 -M snowy
 #SBATCH -p core
-#SBATCH -n 2
-#SBATCH -t 06:00:00
+#SBATCH -n 4
+#SBATCH -t 03:00:00
 #SBATCH -J Pilon_run_01
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user lars.huson.5762@student.uu.se
@@ -18,18 +18,20 @@ mkdir pilon_correction
 
 #align the short reads
 bwa index durian.contigs.fasta
-bwa mem durian.contigs.fasta illumina_data/SRR6058604_scaffold_06.?P.fastq.gz > bwa_aligned.durian.fastq.sam
+bwa mem durian.contigs.fasta \
+        illumina_data/SRR6058604_scaffold_06.1P.fastq.gz \
+        illumina_data/SRR6058604_scaffold_06.2P.fastq.gz > bwa_aligned.durian.fastq.sam
 samtools view -S -b bwa_aligned.durian.fastq.sam > bwa_aligned.durian.bam
 samtools sort bwa_aligned.durian.bam -o bwa_aligned_sorted.durian.bam
 samtools index bwa_aligned_sorted.durian.bam
 
 #commands
 java -jar $PILON_HOME/pilon.jar \
-     --genome durian.contigs.fasta \ 
+     --genome durian.contigs.fasta \
      --bam bwa_aligned_sorted.durian.bam \
      --output pilon_corrected_durian \
      --outdir pilon_correction/ \
-     --threads 2 \
+     --threads 4 \
      --diploid
 
 #save results
