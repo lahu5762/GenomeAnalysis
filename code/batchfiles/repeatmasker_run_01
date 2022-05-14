@@ -11,12 +11,13 @@
 module load bioinfo-tools RepeatMasker
 
 #prepare workspace
-export SCRDIR=$HOME/private/GenomeAnalysis
+export SRCDIR=$HOME/private/GenomeAnalysis/
 scp -r $SRCDIR/analyses/pilon $SNIC_TMP/
 cd $SNIC_TMP
+mkdir repeatmasker
 
 #commands
-RepeatMasker pilon/pilon_corrected_durian.fasta -species Gossypium
+RepeatMasker pilon/pilon_correction/pilon_corrected_durian.fasta -dir repeatmasker
 
 #save output
-scp * $SRCDIR/analyses/repeatmasker
+scp repeatmasker/* $SRCDIR/analyses/repeatmasker/
