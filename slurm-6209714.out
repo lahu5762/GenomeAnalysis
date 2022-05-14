@@ -1,0 +1,74 @@
+usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-l limit] [-o ssh_option] [-P port] [-S program]
+           [[user@]host1:]file1 ... [[user@]host2:]file2
+
+EXITING: FATAL INPUT ERROR: unrecognized parameter name "runmode" in input "Command-Line-Initial"
+SOLUTION: use correct parameter name (check the manual)
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040092_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040092_scaffold_06.1.fastq.gz,trimmed/SRR6040092_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 17:48:52 ..... started STAR run
+May 14 17:48:52 ..... loading genome
+
+EXITING because of FATAL ERROR: could not open genome file star/genome_indices//genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040093_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040093_scaffold_06.1.fastq.gz,trimmed/SRR6040093_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 17:48:52 ..... started STAR run
+May 14 17:48:52 ..... loading genome
+
+EXITING because of FATAL ERROR: could not open genome file star/genome_indices//genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040094_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040094_scaffold_06.1.fastq.gz,trimmed/SRR6040094_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 17:48:52 ..... started STAR run
+May 14 17:48:52 ..... loading genome
+
+EXITING because of FATAL ERROR: could not open genome file star/genome_indices//genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040096_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040096_scaffold_06.1.fastq.gz,trimmed/SRR6040096_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 17:48:52 ..... started STAR run
+May 14 17:48:52 ..... loading genome
+
+EXITING because of FATAL ERROR: could not open genome file star/genome_indices//genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+
+EXITING because of fatal input ERROR: unknown value for the word 3 of outSAMtype:  
+SOLUTION: re-run STAR with one of the allowed values of --outSAMtype BAM Unsorted or SortedByCoordinate or both
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+/var/spool/slurmd/job6209714/slurm_script: line 58: --readFilesCommand: command not found
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6156066_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6156066_scaffold_06.1.fastq.gz,trimmed/SRR6156066_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 17:48:52 ..... started STAR run
+May 14 17:48:52 ..... loading genome
+
+EXITING because of FATAL ERROR: could not open genome file star/genome_indices//genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6156067_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6156067_scaffold_06.1.fastq.gz,trimmed/SRR6156067_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 17:48:52 ..... started STAR run
+May 14 17:48:52 ..... loading genome
+
+EXITING because of FATAL ERROR: could not open genome file star/genome_indices//genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+
+EXITING because of fatal input ERROR: unknown value for the word 3 of outSAMtype:  
+SOLUTION: re-run STAR with one of the allowed values of --outSAMtype BAM Unsorted or SortedByCoordinate or both
+
+May 14 17:48:52 ...... FATAL ERROR, exiting
+/var/spool/slurmd/job6209714/slurm_script: line 79: --readFilesCommand: command not found

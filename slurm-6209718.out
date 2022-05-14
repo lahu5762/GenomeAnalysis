@@ -1,0 +1,99 @@
+	STAR --runMode genomeGenerate --runThreadN 8 --genomeDir star/genome_indices --genomeFastaFiles pilon/pilon_correction/pilon_corrected_durian.fasta
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 18:03:40 ..... started STAR run
+May 14 18:03:40 ... starting to generate Genome files
+!!!!! WARNING: --genomeSAindexNbases 14 is too large for the genome size=38819902, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 11
+May 14 18:03:42 ... starting to sort Suffix Array. This may take a long time...
+May 14 18:03:43 ... sorting Suffix Array chunks and saving them to disk...
+May 14 18:03:52 ... loading chunks from disk, packing SA...
+May 14 18:03:53 ... finished generating suffix array
+May 14 18:03:53 ... generating Suffix Array index
+May 14 18:04:08 ... completed Suffix Array index
+May 14 18:04:08 ... writing Genome to disk ...
+May 14 18:04:08 ... writing Suffix Array to disk ...
+May 14 18:04:08 ... writing SAindex to disk
+May 14 18:04:10 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040092_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040092_scaffold_06.1.fastq.gz,trimmed/SRR6040092_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 18:04:10 ..... started STAR run
+May 14 18:04:10 ..... loading genome
+May 14 18:04:11 ..... started mapping
+May 14 18:04:34 ..... finished mapping
+May 14 18:04:34 ..... started sorting BAM
+May 14 18:04:39 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040093_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040093_scaffold_06.1.fastq.gz,trimmed/SRR6040093_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 18:04:40 ..... started STAR run
+May 14 18:04:40 ..... loading genome
+May 14 18:04:41 ..... started mapping
+May 14 18:05:02 ..... finished mapping
+May 14 18:05:02 ..... started sorting BAM
+May 14 18:05:07 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040094_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040094_scaffold_06.1.fastq.gz,trimmed/SRR6040094_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 18:05:07 ..... started STAR run
+May 14 18:05:07 ..... loading genome
+May 14 18:05:08 ..... started mapping
+May 14 18:05:43 ..... finished mapping
+May 14 18:05:43 ..... started sorting BAM
+May 14 18:05:59 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6040096_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6040096_scaffold_06.1.fastq.gz,trimmed/SRR6040096_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 18:06:00 ..... started STAR run
+May 14 18:06:00 ..... loading genome
+May 14 18:06:01 ..... started mapping
+May 14 18:06:31 ..... finished mapping
+May 14 18:06:31 ..... started sorting BAM
+May 14 18:06:46 ..... finished successfully
+
+EXITING because of fatal input ERROR: unknown value for the word 3 of outSAMtype:  
+SOLUTION: re-run STAR with one of the allowed values of --outSAMtype BAM Unsorted or SortedByCoordinate or both
+
+May 14 18:06:48 ...... FATAL ERROR, exiting
+/var/spool/slurmd/job6209718/slurm_script: line 58: --readFilesCommand: command not found
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6156066_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6156066_scaffold_06.1.fastq.gz,trimmed/SRR6156066_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 18:06:48 ..... started STAR run
+May 14 18:06:48 ..... loading genome
+May 14 18:06:49 ..... started mapping
+May 14 18:07:13 ..... finished mapping
+May 14 18:07:13 ..... started sorting BAM
+May 14 18:07:17 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir star/genome_indices --outFileNamePrefix star/star_out_SRR6156067_scaffold_06_ --outSAMtype BAM SortedByCoordinate --readFilesCommand gunzip -c --readFilesIn trimmed/SRR6156067_scaffold_06.1.fastq.gz,trimmed/SRR6156067_scaffold_06.2.fastq.gz
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 14 18:07:18 ..... started STAR run
+May 14 18:07:18 ..... loading genome
+May 14 18:07:19 ..... started mapping
+May 14 18:07:49 ..... finished mapping
+May 14 18:07:50 ..... started sorting BAM
+May 14 18:08:02 ..... finished successfully
+
+EXITING because of fatal input ERROR: unknown value for the word 3 of outSAMtype:  
+SOLUTION: re-run STAR with one of the allowed values of --outSAMtype BAM Unsorted or SortedByCoordinate or both
+
+May 14 18:08:03 ...... FATAL ERROR, exiting
+/var/spool/slurmd/job6209718/slurm_script: line 79: --readFilesCommand: command not found
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/genome_indices/SAindex’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/genome_indices/chrNameLength.txt’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/genome_indices/SA’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040092_scaffold_06_Aligned.sortedByCoord.out.bam’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040092_scaffold_06_Log.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040092_scaffold_06_SJ.out.tab’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040093_scaffold_06_Aligned.sortedByCoord.out.bam’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040093_scaffold_06_Log.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040093_scaffold_06_SJ.out.tab’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040094_scaffold_06_Aligned.sortedByCoord.out.bam’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040094_scaffold_06_Log.final.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040094_scaffold_06_Log.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040094_scaffold_06_SJ.out.tab’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040096_scaffold_06_Aligned.sortedByCoord.out.bam’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040096_scaffold_06_Log.final.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040096_scaffold_06_Log.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6040096_scaffold_06_SJ.out.tab’: Disk quota exceeded
+                                                                                                                                                                                                                                                                                                                  cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6156066_scaffold_06_Log.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6156066_scaffold_06_Log.progress.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6156066_scaffold_06_SJ.out.tab’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6156067_scaffold_06_Aligned.sortedByCoord.out.bam’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6156067_scaffold_06_Log.final.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6156067_scaffold_06_Log.out’: Disk quota exceeded
+cp: failed to close ‘/home/lsahuson/private/GenomeAnalysis/analyses/star/star_out_SRR6156067_scaffold_06_SJ.out.tab’: Disk quota exceeded

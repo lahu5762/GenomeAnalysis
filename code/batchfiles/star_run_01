@@ -8,62 +8,74 @@
 #SBATCH --mail-user lars.huson.5762@student.uu.se
 
 #Modules
-module load bioinfo-tools
-module load gcc/6.2.0
-module load star/2.5.2b
+module load bioinfo-tools star
 
-# move to node
+#prepare workspace
 export SRCDIR=$HOME/private/GenomeAnalysis
 scp -r $SRCDIR/raw_data/transcriptome/trimmed $SNIC_TMP/
+scp -r $SRCDIR/analyses/pilon $SNIC_TMP/
 cd $SNIC_TMP
 mkdir star
 
 #Commands
+STAR --runMode genomeGenerate \
+     --runThreadN 8 \
+     --genomeDir star/genome_indices \
+     --genomeFastaFiles pilon/pilon_correction/pilon_corrected_durian.fasta
+
 STAR --runThreadN 8 \
-     --genomeDir trimmed \
-     --outFileNamePrefix star/star_out_SRR6040092_scaffold_06 \
+     --genomeDir star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040092_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6040092_scaffold_06.1.fastq.gz,trimmed/SRR6040092_scaffold_06.2.fastq.gz 
 
 STAR --runThreadN 8 \
-     --genomeDir  trimmed \
-     --outFileNamePrefix star/star_out_SRR6040093_scaffold_06 \
+     --genomeDir  star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040093_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6040093_scaffold_06.1.fastq.gz,trimmed/SRR6040093_scaffold_06.2.fastq.gz
 
 STAR --runThreadN 8 \
-     --genomeDir trimmed \
-     --outFileNamePrefix star/star_out_SRR6040094_scaffold_06 \
+     --genomeDir star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040094_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6040094_scaffold_06.1.fastq.gz,trimmed/SRR6040094_scaffold_06.2.fastq.gz 
 
 STAR --runThreadN 8 \
-     --genomeDir trimmed \
-     --outFileNamePrefix star/star_out_SRR6040096_scaffold_06 \
+     --genomeDir star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040096_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6040096_scaffold_06.1.fastq.gz,trimmed/SRR6040096_scaffold_06.2.fastq.gz 
 
 STAR --runThreadN 8 \
-     --genomeDir trimmed \
-     --outFileNamePrefix star/star_out_SRR6040097_scaffold_06 \
+     --genomeDir star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6040097_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \     
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6040097_scaffold_06.1.fastq.gz,trimmed/SRR6040097_scaffold_06.2.fastq.gz 
 
 STAR --runThreadN 8 \
-     --genomeDir trimmed \
-     --outFileNamePrefix star/star_out_SRR6156066_scaffold_06 \
+     --genomeDir star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6156066_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6156066_scaffold_06.1.fastq.gz,trimmed/SRR6156066_scaffold_06.2.fastq.gz 
 
 STAR --runThreadN 8 \
-     --genomeDir trimmed \
-     --outFileNamePrefix star/star_out_SRR6156067_scaffold_06 \
+     --genomeDir star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6156067_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6156067_scaffold_06.1.fastq.gz,trimmed/SRR6156067_scaffold_06.2.fastq.gz 
 
 STAR --runThreadN 8 \
-     --genomeDir trimmed \
-     --outFileNamePrefix star/star_out_SRR6156069_scaffold_06 \
+     --genomeDir star/genome_indices \
+     --outFileNamePrefix star/star_out_SRR6156069_scaffold_06_ \
+     --outSAMtype BAM SortedByCoordinate \     
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6156069_scaffold_06.1.fastq.gz,trimmed/SRR6156069_scaffold_06.2.fastq.gz 
 
