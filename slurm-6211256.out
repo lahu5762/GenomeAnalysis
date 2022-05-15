@@ -1,0 +1,11 @@
+augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
+blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
+GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
+augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
+
+The following have been reloaded with a version change:
+  1) blast/2.2.31+ => blast/2.9.0+
+
+GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
+# Sun May 15 16:23:24 2022: Logfile: /scratch/6211256/braker/durio_zibethinus/braker.log!
+# Sun May 15 16:53:28 2022 WARNING: Number of good genes is low (334). Recommended are at least 600 genes

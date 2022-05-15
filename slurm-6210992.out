@@ -1,0 +1,34 @@
+augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
+blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
+GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
+augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
+
+The following have been reloaded with a version change:
+  1) blast/2.2.31+ => blast/2.9.0+
+
+GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
+# Sun May 15 14:10:39 2022: braker.pl version 2.1.1
+
+# Sun May 15 14:10:39 2022: Configuring of BRAKER for using external tools...
+
+# Sun May 15 14:10:39 2022: Command line flag --AUGUSTUS_CONFIG_PATH was provided. Setting $AUGUSTUS_CONFIG_PATH in braker.pl to augustus_config.
+# Sun May 15 14:10:39 2022: Setting $AUGUSTUS_BIN_PATH to command line argument --AUGUSTUS_BIN_PATH value /sw/bioinfo/augustus/3.4.0/snowy/bin.
+# Sun May 15 14:10:39 2022: Setting $AUGUSTUS_SCRIPTS_PATH to command line argument --AUGUSTUS_SCRIPTS_PATH value /sw/bioinfo/augustus/3.4.0/snowy/scripts.
+# Sun May 15 14:10:39 2022: Setting $GENEMARK_PATH to command line argument --GENEMARK_PATH value /sw/bioinfo/GeneMark/4.33-es/snowy.
+# Sun May 15 14:10:39 2022: Did not find environment variable $BAMTOOLS_PATH (either variable does not exist, or the path given in variable does not exist). Will try to set this variable in a different way, later.
+# Sun May 15 14:10:39 2022: Trying to guess $BAMTOOLS_BIN_PATH from location of bamtools executable that is available in your $PATH.
+# Sun May 15 14:10:39 2022: Setting $BAMTOOLS_BIN_PATH to /sw/bioinfo/bamtools/2.5.1/snowy/bin
+# Sun May 15 14:10:39 2022: Did not find environment variable $SAMTOOLS_PATH  (either variable does not exist, or the path given in variable doesnot exist). Will try to set this variable in a different way, later.
+# Sun May 15 14:10:39 2022: Trying to guess $SAMTOOLS_PATH from location of samtools executable in your $PATH.
+# Sun May 15 14:10:39 2022: Setting $SAMTOOLS_PATH to /sw/bioinfo/samtools/1.8/snowy/bin
+# Sun May 15 14:10:39 2022: Did not find environment variable $BLAST_PATH
+# Sun May 15 14:10:39 2022: Trying to guess $BLAST_PATH from location of blastp executable that is available in your $PATH.
+# Sun May 15 14:10:39 2022: Setting $BLAST_PATH to /sw/bioinfo/blast/2.9.0+/snowy/bin
+# Sun May 15 14:10:39 2022: Configuration of BRAKER for using external tools is complete!
+
+# Sun May 15 14:10:39 2022: ERROR: in file /sw/bioinfo/braker/2.1.1/snowy/braker.pl at line 3055
+BAM file /scratch/6210992/aligned_bam_files* does not exist.
+usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-l limit] [-o ssh_option] [-P port] [-S program]
+           [[user@]host1:]file1 ... [[user@]host2:]file2
+/var/spool/slurmd/job6210992/slurm_script: line 39: repeatmasker]: command not found

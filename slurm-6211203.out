@@ -1,0 +1,12 @@
+augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
+blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
+GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
+augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
+
+The following have been reloaded with a version change:
+  1) blast/2.2.31+ => blast/2.9.0+
+
+GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
+# Sun May 15 16:01:20 2022: Logfile: /scratch/6211203/braker/durio_zibethinus/braker.log!
+ERROR in file /sw/bioinfo/braker/2.1.1/snowy/braker.pl at line 4956
+Failed to execute: perl /sw/bioinfo/GeneMark/4.33-es/snowy/gmes_petap.pl --verbose --sequence=/scratch/6211203/braker/durio_zibethinus/genome.fa --ET=/scratch/6211203/braker/durio_zibethinus/genemark_hintsfile.gff --et_score 10 --max_intergenic 50000 --cores=4 --soft_mask 1000 1>/scratch/6211203/braker/durio_zibethinus/GeneMark-ET.stdout 2>/scratch/6211203/braker/durio_zibethinus/errors/GeneMark-ET.stderr

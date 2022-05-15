@@ -16,24 +16,24 @@ module load blast/2.9.0+
 module load GenomeThreader/1.7.0
 module load samtools/1.8
 module load GeneMark/4.33-es_Perl5.24.1
+shopt -s extglob
 
 #prepare workspace
 export SRCDIR=$HOME/private/GenomeAnalysis
 scp -r $SRCDIR/analyses/star $SNIC_TMP/
 scp -r $SRCDIR/analyses/repeatmasker $SNIC_TMP/
-scp -r $SRCDIR/code/config_files/augustus_config $SNIC_TMP/
 cd $SNIC_TMP
-samtools merge aligned_bam_files star/star_out_*_scaffold_06_Aligned.sorted*
+samtools merge aligned_bam_files.bam star/star_out_*_scaffold_06_Aligned.sorted*
 
 #commands
 braker.pl --genome=repeatmasker/pilon_corrected_durian.fasta.masked \
-	--bam=aligned_bam_files* \
+	--bam=aligned_bam_files.bam \
         --species=durio_zibethinus \
         --cores=4 --softmasking --gff3 --useexisting \
-	--AUGUSTUS_CONFIG_PATH=augustus_config \
+	--AUGUSTUS_CONFIG_PATH=$SRCDIR/code/config_files/augustus_config \
 	--AUGUSTUS_BIN_PATH=/sw/bioinfo/augustus/3.4.0/snowy/bin \
 	--AUGUSTUS_SCRIPTS_PATH=/sw/bioinfo/augustus/3.4.0/snowy/scripts \
 	--GENEMARK_PATH=/sw/bioinfo/GeneMark/4.33-es/snowy 
 
 #save results
-scp -r ![star|repeatmasker] $SRCDIR/analyses/braker
+scp -r !(star|repeatmasker) $SRCDIR/analyses/braker
