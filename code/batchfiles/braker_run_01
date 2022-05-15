@@ -17,14 +17,23 @@ module load GenomeThreader/1.7.0
 module load samtools/1.8
 module load GeneMark/4.33-es_Perl5.24.1
 
-#Paths
-bampath=/home/transcriptome_assembly/samtools_preprocessing_trinity
-genpath=/home//analyses/genome_assembly/pilon_correction
+#prepare workspace
+export SRCDIR=$HOME/private/GenomeAnalysis
+scp -r $SRCDIR/analyses/star $SNIC_TMP/
+scp -r $SRCDIR/analyses/repeatmasker $SNIC_TMP/
+scp -r $SRCDIR/code/config_files/augustus_config $SNIC_TMP/
+cd $SNIC_TMP
+samtools merge aligned_bam_files star/star_out_*_scaffold_06_Aligned.sorted*
 
-#Command
-braker.pl --species=durio_zibethinus --genome=$genpath/pilon_corrected_assembly_scaffold_06_220412.fasta.masked \
-	--bam=*_scaffold_06.* --cores=4 --softmasking --gff3 \
-	--AUGUSTUS_CONFIG_PATH=/home/cabo8003/Project/GenomeAnalysis/code/annotation/augustus_config \
+#commands
+braker.pl --genome=repeatmasker/pilon_corrected_durian.fasta.masked \
+	--bam=aligned_bam_files* \
+        --species=durio_zibethinus \
+        --cores=4 --softmasking --gff3 --useexisting \
+	--AUGUSTUS_CONFIG_PATH=augustus_config \
 	--AUGUSTUS_BIN_PATH=/sw/bioinfo/augustus/3.4.0/snowy/bin \
 	--AUGUSTUS_SCRIPTS_PATH=/sw/bioinfo/augustus/3.4.0/snowy/scripts \
 	--GENEMARK_PATH=/sw/bioinfo/GeneMark/4.33-es/snowy 
+
+#save results
+scp -r ![star|repeatmasker] $SRCDIR/analyses/braker

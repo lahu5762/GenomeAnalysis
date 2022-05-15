@@ -54,7 +54,7 @@ STAR --runThreadN 8 \
 STAR --runThreadN 8 \
      --genomeDir star/genome_indices \
      --outFileNamePrefix star/star_out_SRR6040097_scaffold_06_ \
-     --outSAMtype BAM SortedByCoordinate \     
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6040097_scaffold_06.1.fastq.gz,trimmed/SRR6040097_scaffold_06.2.fastq.gz 
 
@@ -75,7 +75,7 @@ STAR --runThreadN 8 \
 STAR --runThreadN 8 \
      --genomeDir star/genome_indices \
      --outFileNamePrefix star/star_out_SRR6156069_scaffold_06_ \
-     --outSAMtype BAM SortedByCoordinate \     
+     --outSAMtype BAM SortedByCoordinate \
      --readFilesCommand gunzip -c \
      --readFilesIn trimmed/SRR6156069_scaffold_06.1.fastq.gz,trimmed/SRR6156069_scaffold_06.2.fastq.gz 
 
