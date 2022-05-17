@@ -1,0 +1,39 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 2:00:00
+#SBATCH -J htseq_run_01
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lars.huson.5762@student.uu.se
+
+#load modules
+module load bioinfo-tools htseq samtools
+
+#prepare workspace
+export SRCDIR=$HOME/private/GenomeAnalysis
+scp -r $SRCDIR/analyses/star $SNIC_TMP
+scp -r $SRCDIR/analyses/braker $SNIC_TMP
+cd $SNIC_TMP
+mkdir htseq
+
+#commands
+for file in star/star_out_*_scaffold_06_Aligned.sorted*.bam
+do
+    filename=${file##*out_}
+    samtools index $file
+    htseq-count -n 2 -f bam --stranded=no -r pos -i ID \
+                -t CDS \
+                $file \
+                braker/durio_zibethinus/augustus.hints.gff3 > \
+                htseq/htseq_CDS_${filename}.txt
+    htseq-count -n 2 -f bam --stranded=no -r pos -i ID \
+                -t exon \
+                $file \
+                braker/durio_zibethinus/augustus.hints.gff3 \
+                htseq/htseq_exon_${filename}.txt
+done
+
+#save results
+scp -r htseq/* $SRCDIR/analyses/htseq
