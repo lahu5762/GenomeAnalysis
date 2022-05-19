@@ -1,0 +1,17 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 02:00:00
+#SBATCH -J quast_run_01
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lars.huson.5762@student.uu.se
+
+# Load modules
+module load bioinfo-tools quast
+
+quast.py -t 2 \
+         -o $HOME/private/GenomeAnalysis/analyses/quast/quast_with_reference \
+         -r $HOME/private/GenomeAnalysis/raw_data/ncbi/GCF_002303985.1_Duzib1.0_genomic.fna.gz \
+         $HOME/private/GenomeAnalysis/analyses/pilon/pilon_correction/pilon_corrected_durian.fasta

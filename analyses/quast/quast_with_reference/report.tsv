@@ -1,0 +1,44 @@
+Assembly	pilon_corrected_durian
+# contigs (>= 0 bp)	958
+# contigs (>= 1000 bp)	958
+# contigs (>= 5000 bp)	891
+# contigs (>= 10000 bp)	689
+# contigs (>= 25000 bp)	190
+# contigs (>= 50000 bp)	92
+Total length (>= 0 bp)	38819902
+Total length (>= 1000 bp)	38819902
+Total length (>= 5000 bp)	38601995
+Total length (>= 10000 bp)	37011904
+Total length (>= 25000 bp)	29076103
+Total length (>= 50000 bp)	25992690
+# contigs	958
+Largest contig	1194735
+Total length	38819902
+Reference length	715230256
+GC (%)	31.08
+Reference GC (%)	32.64
+N50	260019
+N75	24943
+L50	40
+L75	192
+# misassemblies	464
+# misassembled contigs	231
+Misassembled contigs length	22428871
+# local misassemblies	830
+# scaffold gap ext. mis.	0
+# scaffold gap loc. mis.	0
+# unaligned mis. contigs	43
+# unaligned contigs	8 + 273 part
+Unaligned length	1792761
+Genome fraction (%)	4.263
+Duplication ratio	1.220
+# N's per 100 kbp	0.00
+# mismatches per 100 kbp	628.84
+# indels per 100 kbp	255.32
+Largest alignment	1072686
+Total aligned length	36897701
+NA50	126020
+NGA50	-
+NA75	17697
+LA50	66
+LA75	321

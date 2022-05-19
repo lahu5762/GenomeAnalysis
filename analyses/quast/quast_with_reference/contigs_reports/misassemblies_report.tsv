@@ -1,0 +1,21 @@
+Assembly	pilon_corrected_durian
+# misassemblies	464
+  # contig misassemblies	464
+    # c. relocations	239
+    # c. translocations	224
+    # c. inversions	1
+  # scaffold misassemblies	0
+    # s. relocations	0
+    # s. translocations	0
+    # s. inversions	0
+# misassembled contigs	231
+Misassembled contigs length	22428871
+# local misassemblies	830
+# scaffold gap ext. mis.	0
+# scaffold gap loc. mis.	0
+# unaligned mis. contigs	43
+# mismatches	190916
+# indels	77515
+    # indels (<= 5 bp)	73111
+    # indels (> 5 bp)	4404
+Indels length	162193

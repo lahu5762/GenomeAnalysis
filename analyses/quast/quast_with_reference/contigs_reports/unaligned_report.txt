@@ -1,0 +1,8 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                       pilon_corrected_durian
+# fully unaligned contigs      8                     
+Fully unaligned length         51560                 
+# partially unaligned contigs  273                   
+Partially unaligned length     1741201               
+# N's                          0                     
